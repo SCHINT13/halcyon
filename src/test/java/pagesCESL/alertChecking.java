@@ -28,8 +28,8 @@ public class alertChecking {
 		plaseOfService pos=new plaseOfService(driver);
 		pos.SelectPosPhone();
 		
-		comboMeals obj_comboMeals=new comboMeals(driver);
-		obj_comboMeals.selectComboMealProduct();
+		WebElement ExpressTendersCombo4=driver.findElement(By.xpath("//*[text()='3 Piece Chicken Combo']/following::div[@class='card-footer'][1]/div[2]"));
+		ExpressTendersCombo4.click();
 		
 		WebElement Chickenchois3=driver.findElement(By.xpath("//*[text()='Chicken Choice (Pick 3)']"));
 		Chickenchois3.click();
@@ -52,7 +52,7 @@ public class alertChecking {
 		String timestamp = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File srcfile= ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcfile, new File ("E:\\screenshots\\"+timestamp+"alert_checking"+".png"));
+		FileUtils.copyFile(srcfile, new File ("C:\\Users\\CH-ShivaNarayana\\eclipse-workspace\\screenshot\\"+".png"));
 		
 		//driver.switchTo().activeElement();
 		

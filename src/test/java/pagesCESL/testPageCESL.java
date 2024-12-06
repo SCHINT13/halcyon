@@ -34,21 +34,22 @@ public class testPageCESL extends Common{
 		pos.SelectPosPhone();
 		
 		comboMeals obj_comboMeals=new comboMeals(driver);
-		obj_comboMeals.selectComboMealProduct();
+		//obj_comboMeals.selectComboMealProduct();
+		obj_comboMeals.selectComboMealProduct7ExpressTendersCombo();
 		
 		Thread.sleep(5000);
 		
 		obj_comboMeals.breatOptions();
-	//	obj_comboMeals.tendersOptions();
+		//obj_comboMeals.tendersOptions();
+		obj_comboMeals.tenders_Choice_Pick_7();
 		obj_comboMeals.sauceChoicesPick2();
-		
-		
+	
 		Thread.sleep(5000);
 
 		String timestamp = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File srcfile= ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcfile, new File ("E:\\screenshots\\"+timestamp+".png"));
+		FileUtils.copyFile(srcfile, new File ("C:\\Users\\CH-ShivaNarayana\\eclipse-workspace\\screenshot\\"+timestamp+"validation for bread tenders sausechoice.png"));
 		
 		
 		System.out.println("################################################################");

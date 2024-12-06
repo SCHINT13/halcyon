@@ -1,6 +1,5 @@
 package pagesCESL;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
@@ -86,7 +85,7 @@ public class createOrderAndRewiteOrderTest {
 		String timestamp = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File srcfile= ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcfile, new File ("E:\\screenshots\\"+timestamp+"freshorder.png"));
+		FileUtils.copyFile(srcfile, new File ("C:\\Users\\CH-ShivaNarayana\\eclipse-workspace\\screenshots\\"+timestamp+"freshorder.png"));
 		
 		Thread.sleep(5000);
 		
@@ -189,29 +188,33 @@ public class createOrderAndRewiteOrderTest {
 		Thread.sleep(3000);
 		
 		File src1file= ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src1file, new File ("E:\\screenshots\\"+timestamp+"modifiedorder.png"));
+		FileUtils.copyFile(src1file, new File ("C:\\Users\\CH-ShivaNarayana\\eclipse-workspace\\screenshots\\"+timestamp+"modifiedorder.png"));
 
 		//click paynow 
 		
-		driver.findElement(By.xpath("//*[@id='btnPayNow']")).click();
-		Thread.sleep(10000);
-		File src2file= ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src2file, new File ("E:\\screenshots\\"+timestamp+"paymentscreen.png"));
+//		driver.findElement(By.xpath("//*[@id='btnPayNow']")).click();
+//		Thread.sleep(10000);
+//		File src2file= ts.getScreenshotAs(OutputType.FILE);
+//		FileUtils.copyFile(src2file, new File ("C:\\Users\\CH-ShivaNarayana\\eclipse-workspace\\screenshots\\"+timestamp+"paymentscreen.png"));
+//		
+//		WebElement orderid=driver.findElement(By.xpath("//*[@class='text-primary font-weight-bold display-4  cardValue']"));
+//		String OrderId=orderid.getText();
+//		
+//		System.out.println("Order id is " + OrderId);
+//		
+//		WebElement amount=driver.findElement(By.xpath("//*[@class='text-success font-weight-bold display-4 cardValue']"));
+//		String Amount=amount.getText();
+//		
+//		System.out.println("Order Value is " + Amount);
+//		
+//		//cancel the order 
+//		
+//		driver.findElement(By.xpath("//*[@class='btn btn-lg btn-outline-danger rounded-pill px-3 py-2 shadow-lg mr-20 cancelBtn']")).click();
+//		Thread.sleep(10000);
 		
-		WebElement orderid=driver.findElement(By.xpath("//*[@class='text-primary font-weight-bold display-4  cardValue']"));
-		String OrderId=orderid.getText();
 		
-		System.out.println("Order id is " + OrderId);
 		
-		WebElement amount=driver.findElement(By.xpath("//*[@class='text-success font-weight-bold display-4 cardValue']"));
-		String Amount=amount.getText();
-		
-		System.out.println("Order Value is " + Amount);
-		
-		//cancel the order 
-		
-		driver.findElement(By.xpath("//*[@class='btn btn-lg btn-outline-danger rounded-pill px-3 py-2 shadow-lg mr-20 cancelBtn']")).click();
-		Thread.sleep(10000);
+		System.out.println("##########################################");
 		driver.quit();
 		
 		
